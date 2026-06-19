@@ -28,6 +28,7 @@
       min-height: 100vh;
       overflow: hidden;
       user-select: none;
+      text-transform: uppercase;
     }
 
     /* NUVENS */
@@ -78,7 +79,8 @@
     .optional-hint { font-size: clamp(.78rem, 2.5vw, .92rem); color: #9A7050; background: #FFF0D0; border-radius: .75rem; padding: .4375rem .875rem; margin-bottom: 1.25rem; display: inline-block; line-height: 1.4; }
     .field-group { text-align: left; margin-bottom: .875rem; }
     .field-label { display: block; font-size: clamp(.82rem, 2.5vw, .95rem); font-weight: 800; color: var(--brown-dark); margin-bottom: .3125rem; }
-    .form-input { width: 100%; padding: .8125rem 1.125rem; border: .1875rem solid #C8A87A; border-radius: 1rem; font-family: 'Baloo 2', cursive; font-size: clamp(.95rem, 3vw, 1.1rem); font-weight: 600; color: var(--brown-dark); background: white; outline: none; transition: border-color .2s, box-shadow .2s; }
+    .form-input { width: 100%; padding: .8125rem 1.125rem; border: .1875rem solid #C8A87A; border-radius: 1rem; font-family: 'Baloo 2', cursive; font-size: clamp(.95rem, 3vw, 1.1rem); font-weight: 600; color: var(--brown-dark); background: white; outline: none; transition: border-color .2s, box-shadow .2s; text-transform: none; }
+    .form-input::placeholder { text-transform: none; }
     .form-input:focus { border-color: var(--orange); box-shadow: 0 0 0 .1875rem rgba(255,140,66,.2); }
     .form-input.field-invalid { border-color: var(--wrong); box-shadow: 0 0 0 .1875rem rgba(232,64,64,.2); animation: wrongShake .4s ease; }
     .field-error { background: #FFE8E8; border: .125rem solid var(--wrong); border-radius: .875rem; padding: .625rem 1rem; font-size: clamp(.82rem, 2.5vw, .95rem); font-weight: 700; color: #9B1C1C; margin-bottom: .875rem; }
@@ -492,8 +494,8 @@ const QUESTIONS = [
     hint: 'Esse bichinho se parece muito comigo. Até podemos ser primos!',
     info: 'Parabéns! Adoramos viver pertinho do rio para nos refrescar, alimentar e fazer nossas casinhas!',
     answers: [
-      { label: 'Capivara', correct: true,  img: 'IMAGENS-webp/PERGUNTAS/PGT-1/CAPIVARA.webp', audio: 'AUDIOS/PGT-1/P1_ALT_CERTA.m4a' },
-      { label: 'Macaco',   correct: false, img: 'IMAGENS-webp/PERGUNTAS/PGT-1/MACACO.webp', audio: 'AUDIOS/PGT-1/P1_ALT_ERRADA.m4a' },
+      { label: 'Capivara', correct: true,  img: 'IMAGENS-webp/PERGUNTAS/PGT-1/Capivara 2 (2).jpg', audio: 'AUDIOS/PGT-1/P1_ALT_CERTA.m4a' },
+      { label: 'Macaco',   correct: false, img: 'IMAGENS-webp/PERGUNTAS/PGT-1/Macaco 2 (1).jpg', audio: 'AUDIOS/PGT-1/P1_ALT_ERRADA.m4a' },
     ],
   },
   {
@@ -503,8 +505,8 @@ const QUESTIONS = [
     hint: 'Esse bichinho faz "quack quack" e adora água!',
     info: 'Muito bem! O marreco é o símbolo da festa e faz parte da comida típica mais famosa da cidade!',
     answers: [
-      { label: 'Marreco',  correct: true,  img: 'IMAGENS-webp/PERGUNTAS/PGT-2/MARRECO.webp', audio: 'AUDIOS/PGT-2/P2_ALT_CERTA.m4a' },
-      { label: 'Elefante', correct: false, img: 'IMAGENS-webp/PERGUNTAS/PGT-2/ELEFANTE.webp', audio: 'AUDIOS/PGT-2/P2_ALT_ERRADA.m4a' },
+      { label: 'Marreco',  correct: true,  img: 'IMAGENS-webp/PERGUNTAS/PGT-2/Marreco 2.webp', audio: 'AUDIOS/PGT-2/P2_ALT_CERTA.m4a' },
+      { label: 'Elefante', correct: false, img: 'IMAGENS-webp/PERGUNTAS/PGT-2/Elefante 2.jpg', audio: 'AUDIOS/PGT-2/P2_ALT_ERRADA.m4a' },
     ],
   },
   {
@@ -525,19 +527,19 @@ const QUESTIONS = [
     hint: 'Eles fazem barulhinhos e vivem na natureza!',
     info: 'Acertou! O Zoobotânico tem vários animais e é um lugar muito legal para conhecer!',
     answers: [
-      { label: 'Vários animaizinhos', correct: true,  img: 'IMAGENS-webp/PERGUNTAS/PGT-4/ANIMAIZINHOS.webp', audio: 'AUDIOS/PGT-4/P4_ALT_CERTA.m4a' },
-      { label: 'Carros de corrida',   correct: false, img: 'IMAGENS-webp/PERGUNTAS/PGT-4/CARROS.webp', audio: 'AUDIOS/PGT-4/P4_ALT_ERRADA.m4a' },
+      { label: 'Vários animaizinhos', correct: true,  img: 'IMAGENS-webp/PERGUNTAS/PGT-4/Animais 2.webp', audio: 'AUDIOS/PGT-4/P4_ALT_CERTA.m4a' },
+      { label: 'Carros de corrida',   correct: false, img: 'IMAGENS-webp/PERGUNTAS/PGT-4/Carros 2.webp', audio: 'AUDIOS/PGT-4/P4_ALT_ERRADA.m4a' },
     ],
   },
   {
     block: 1,
-    audio: 'AUDIOS/PGT-5/P5_ENUNCIADO.m4a',
-    question: 'O Rio Itajaí-Mirim passa por Brusque. O que tem dentro dele?',
+    audio: 'AUDIOS/Pergunta Rio.mp4',
+    question: 'NO MEIO DA NOSSA CIDADE PASSA UM RIO, QUAL O NOME DELE?',
     hint: 'É um lugar onde os peixinhos nadam!',
-    info: 'Muito bem! O rio tem água e peixinhos que brincam e se divertem de montão!',
+    info: 'Muito bem! ISSO MESMO!',
     answers: [
-      { label: 'Água e peixinhos', correct: true,  img: 'IMAGENS-webp/PERGUNTAS/PGT-5/agua-e-peixinhos.webp', audio: 'AUDIOS/PGT-5/P5_ALT_CERTA.m4a' },
-      { label: 'Folhas e galhos',  correct: false, img: 'IMAGENS-webp/PERGUNTAS/PGT-5/folhas-e-galhos.webp', audio: 'AUDIOS/PGT-5/P5_ALT_ERRADA.m4a' },
+      { label: 'RIO ITAJAÍ MIRIM', correct: true,  img: 'IMAGENS-webp/PERGUNTAS/PGT-5/Rio Itajai mirim.webp', audio: 'AUDIOS/Rio Itajaí mirim.mp4' },
+      { label: 'RIO NILO',  correct: false, img: 'IMAGENS-webp/PERGUNTAS/PGT-5/Rio Nilo.jpg', audio: 'AUDIOS/Rio Nilo.mp4' },
     ],
   },
   {
@@ -586,13 +588,13 @@ const QUESTIONS = [
   },
   {
     block: 2,
-    audio: 'AUDIOS/PGT-10/P10_ENUNCIADO.m4a',
-    question: 'Em que lugar você iria para ver um filme bem legal?',
-    hint: 'Tem uma tela gigante para assistir e pipoca com muita manteiga!',
-    info: 'Isso mesmo! No cinema da Havan passam filmes incríveis, além da pipoca ser super gostosa!',
+    audio: 'AUDIOS/Pergunta jeep.mp4',
+    question: 'QUAL EVENTO DA NOSSA CIDADE TEM MUITOS JEEPS E MANOBRAS RADICÁIS?',
+    hint: 'TEM MUITOS CARROS!',
+    info: 'Isso mesmo! PARABÉNS!',
     answers: [
-      { label: 'Cinema da Havan',  correct: true,  img: 'IMAGENS-webp/PERGUNTAS/PGT-10/CINEMA.webp', audio: 'AUDIOS/PGT-10/P10_ALT_CERTA.m4a' },
-      { label: 'Campo de futebol', correct: false, img: 'IMAGENS-webp/PERGUNTAS/PGT-10/FUTEBOL.webp', audio: 'AUDIOS/PGT-10/P10_ALT_ERRADA.m4a' },
+      { label: 'FENA JEEP',  correct: true,  img: 'IMAGENS-webp/PERGUNTAS/PGT-10/JEEP (1).jpg', audio: 'AUDIOS/Fena jeep.mp4' },
+      { label: 'FESTA DE SÃO JOÃO', correct: false, img: 'IMAGENS-webp/PERGUNTAS/PGT-10/sÃO jPAP (1).webp', audio: 'AUDIOS/Festa de são joão.mp4' },
     ],
   },
   {
@@ -613,8 +615,8 @@ const QUESTIONS = [
     hint: 'Tem grama, natureza e espaço pra sentar!',
     info: 'Muito bem! O Parque das Esculturas é perfeito para piquenique, brincar e até passear com o pet!',
     answers: [
-      { label: 'Parque das Esculturas', correct: true,  img: 'IMAGENS-webp/PERGUNTAS/PGT-12/esculturas.webp', audio: 'AUDIOS/PGT-12/P12_ALT_CERTA.m4a' },
-      { label: 'Farmácia',              correct: false, img: 'IMAGENS-webp/PERGUNTAS/PGT-12/farmacia.webp', audio: 'AUDIOS/PGT-12/P12_ALT_ERRADA.m4a' },
+      { label: 'Parque das Esculturas', correct: true,  img: 'IMAGENS-webp/PERGUNTAS/PGT-12/parque-esculturas.webp', audio: 'AUDIOS/PGT-12/P12_ALT_CERTA.m4a' },
+      { label: 'Farmácia',              correct: false, img: 'IMAGENS-webp/PERGUNTAS/PGT-12/farmacia 2.jpg', audio: 'AUDIOS/PGT-12/P12_ALT_ERRADA.m4a' },
     ],
   },
   {
@@ -624,8 +626,8 @@ const QUESTIONS = [
     hint: 'É um lugar com objetos antigos e muito diferentes!',
     info: 'Acertou! No museu aprendemos sobre o passado da cidade e das pessoas!',
     answers: [
-      { label: 'Museu Arquidiocesano', correct: true,  img: 'IMAGENS-webp/PERGUNTAS/PGT-13/museu.webp', audio: 'AUDIOS/PGT-13/P13_ALT_ERRADA.m4a' },
-      { label: 'Havan',                correct: false, img: 'IMAGENS-webp/PERGUNTAS/PGT-13/havan.webp', audio: 'AUDIOS/PGT-13/P13_ALT_CERTA.m4a' },
+      { label: 'Museu Arquidiocesano', correct: true,  img: 'IMAGENS-webp/PERGUNTAS/PGT-13/Museu 2.webp', audio: 'AUDIOS/PGT-13/P13_ALT_ERRADA.m4a' },
+      { label: 'Havan',                correct: false, img: 'IMAGENS-webp/PERGUNTAS/PGT-13/Havan.jpeg', audio: 'AUDIOS/PGT-13/P13_ALT_CERTA.m4a' },
     ],
   },
   {
@@ -635,8 +637,8 @@ const QUESTIONS = [
     hint: 'É verde e fica na frente de uma loja bem grande em Brusque!',
     info: 'Muito bem! A estátua da Havan é um ponto bem conhecido da cidade!',
     answers: [
-      { label: 'Estátua da Havan', correct: true,  img: 'IMAGENS-webp/PERGUNTAS/PGT-14/estatua-da-liberdade.webp', audio: 'AUDIOS/PGT-14/P14_ALT_CERTA.m4a' },
-      { label: 'Cristo Redentor',  correct: false, img: 'IMAGENS-webp/PERGUNTAS/PGT-14/cristo-redentor.webp', audio: 'AUDIOS/PGT-14/P14_ALT_ERRADA.m4a' },
+      { label: 'Estátua da Havan', correct: true,  img: 'IMAGENS-webp/PERGUNTAS/PGT-14/Havan.jpeg', audio: 'AUDIOS/PGT-14/P14_ALT_CERTA.m4a' },
+      { label: 'Cristo Redentor',  correct: false, img: 'IMAGENS-webp/PERGUNTAS/PGT-14/Cristo redentor 2.jpg', audio: 'AUDIOS/PGT-14/P14_ALT_ERRADA.m4a' },
     ],
   },
   {
